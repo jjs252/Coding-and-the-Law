@@ -1,0 +1,12 @@
+Pseudo-Code: 
+Hard-code the stop-id (stpid) of the bus stop in front of the law school
+Every couple of minutes request predicted arrival time of route 172 at the law school 
+(i.e., call getpredictions with stpid)
+If the predicted arrival time is less than or equal to 5 minutes:
+send a message to the user indicating predicted arrival time of route 172
+else:
+	don’t notify the user
+
+I’m not sure if there are any variables in the API response that weren’t documented, as we haven’t implemented anything. Did you want us to include contingencies in our pseudocode to handle unexpected data returned by getpredictions?   
+
+The accuracy of the estimated arrival time could be improved by tracking the predicted arrival time and the actual arrival time over a sustained period. Some corrective factor could be determined based on the probability that the predicted arrival time will be greater or less than true arrival time. 
